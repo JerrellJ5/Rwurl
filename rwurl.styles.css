@@ -1,0 +1,187 @@
+/* General styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Ensure the background is black */
+    color: #fff; /* White text for contrast */
+    overflow: hidden; /* Prevent scroll bars */
+}
+
+/* Header styling */
+header {
+    background-color: orange;
+    padding: 20px;
+    text-align: center;
+}
+
+#logo {
+    color: black;
+    font-family: 'Creepster', cursive; /* Spooky Font */
+    font-size: 7em; /* Increased font size */
+    margin: 0;
+}
+
+/* Navigation links */
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Creepster', cursive; /* Spooky Font */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Centered content */
+.centered-text {
+    font-size: 4em; /* Increased by 1 unit (from 3em to 4em) */
+    font-weight: bold;
+    text-align: center;
+    color: orange;
+    font-family: 'Creepster', cursive; /* Spooky Font */
+    position: absolute; /* Position the text absolutely to center it */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to perfectly center */
+}
+
+/* Contact info styling */
+.contact-info {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 1.2em;
+    font-family: 'Creepster', cursive; /* Apply Creepster font here */
+}
+
+
+/* Back/Home button styling */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: orange;
+    color: black;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: black;
+    color: orange;
+}
+
+/* Instagram logo styling */
+.instagram-logo {
+    width: 50px; /* Set width */
+    height: 50px; /* Set height */
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem; /* Move the Instagram logo up */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding around the logo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    transition: transform 0.3s; /* Add a transition for hover effect */
+}
+
+.instagram-logo:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Centering the footer content */
+footer {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Van styling */
+#virtual-van {
+    width: 70px; /* Set the width of the van */
+    height: 70px; /* Set the height of the van */
+    position: absolute; /* Absolute positioning to move freely */
+    cursor: pointer;
+    z-index: 10; /* Make sure it's above other elements */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smoother transitions */
+    transform: rotateX(30deg) rotateY(30deg); /* 3D Rotation */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+}
+
+/* Pet styling */
+#pet {
+    width: 70px; /* Set the width of the pet */
+    height: 70px; /* Set the height of the pet */
+    position: absolute; /* Position absolutely for free movement */
+    top: 100px; /* Initial position */
+    left: 100px; /* Initial position */
+    z-index: 10; /* Make sure it's above other elements */
+    transition: left 0.5s ease, top 0.5s ease; /* Smooth transitions for movement */
+}
+
+/* Ensure images have correct dimensions */
+img {
+    max-width: 100%; /* Prevent images from exceeding their container width */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    #logo {
+        font-size: 2em; /* Adjust logo size for smaller screens */
+    }
+
+    .centered-text {
+        font-size: 2.2em; /* Adjust text size for smaller screens */
+    }
+
+    .back-button {
+        padding: 8px 16px; /* Make the button smaller */
+    }
+
+    #virtual-van {
+        width: 10vw; /* Adjust van size for tablet */
+    }
+
+    #pet {
+        width: 60px; /* Smaller pet on tablet-sized devices */
+        height: 60px; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        font-size: 1.8em; /* Adjust logo size for very small screens */
+    }
+
+    .centered-text {
+        font-size: 1.8em; /* Adjust text size for very small screens */
+    }
+
+    .back-button {
+        padding: 6px 12px; /* Make button smaller for mobile */
+        font-size: 0.9em; /* Adjust font size for buttons */
+    }
+
+    #virtual-van {
+        width: 12vw; /* Adjust van size for very small devices */
+    }
+
+    #pet {
+        width: 50px; /* Smaller pet on very small devices */
+        height: 50px; /* Maintain aspect ratio */
+    }
+}
+/* Pet shake animation */
+@keyframes shake {
+    0% { transform: translate(0px, 0px); }
+    25% { transform: translate(-5px, -5px); }
+    50% { transform: translate(5px, -5px); }
+    75% { transform: translate(-5px, 5px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+.shake {
+    animation: shake 0.5s ease; /* Adjust duration and timing as necessary */
+}
