@@ -188,3 +188,33 @@ img {
         height: 50px; /* Maintain aspect ratio */
     }
 }
+}/* Media query for landscape orientation */
+@media only screen and (orientation: landscape) {
+    #logo {
+        font-size: 3em; /* Adjust logo size for landscape mode */
+    }
+
+    .centered-text {
+        font-size: 3em; /* Adjust text size for landscape mode */
+    }
+
+    #virtual-van {
+        width: 60px; /* Adjust van size for landscape mode */
+    }
+
+    #pet {
+        width: 60px; /* Adjust pet size for landscape mode */
+    }
+
+    /* Additional styles can be added here for landscape orientation */
+}
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    #logo {
+        font-size: 2.5em; /* Smaller logo for small screens */
+    }
+    .centered-text {
+        font-size: 2.5em; /* Smaller text for small screens */
+    }
+    /* Other adjustments */
+}
