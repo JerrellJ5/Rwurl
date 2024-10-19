@@ -18,8 +18,10 @@ header {
 #logo {
     color: black;
     font-family: 'Creepster', cursive; /* Spooky Font */
-    font-size: 4em; /* Increased font size */
+    font-size: 10em; /* Increased font size */
     margin: 0;
+    text-align: center; /* Center the text */
+    display: block; /* Ensure it takes up full width for centering */
 }
 
 /* Navigation links */
@@ -187,7 +189,6 @@ img {
         width: 50px; /* Smaller pet on very small devices */
         height: 50px; /* Maintain aspect ratio */
     }
-}
 }/* Media query for landscape orientation */
 @media only screen and (orientation: landscape) {
     #logo {
@@ -217,4 +218,23 @@ img {
         font-size: 2.5em; /* Smaller text for small screens */
     }
     /* Other adjustments */
+}
+/* Style for quotes on larger screens */
+#quote {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Creepster', cursive;
+    font-size: 1.5em;
+    color: orange;
+    z-index: 999;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    #quote {
+        font-size: 1.2em; /* Reduce the font size on smaller screens */
+        bottom: 10px;
+        right: 10px;
+    }
 }
