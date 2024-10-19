@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RWURL LOGISTICS</title>
+    <!-- Creepster font for the entire site -->
     <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="rwurl.styles.css">
+    <style>
+        /* Quote styling */
+        #quote {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-family: 'Creepster', cursive;
+            font-size: 1.5em;
+            color: orange;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -19,11 +32,14 @@
 
     <!-- Main content -->
     <main>
-        <h2 class="centered-text">I'M COMING!!!</h2>
+        <h2 class="centered-text">I'M COMIN!!!</h2>
         <div id="virtual-van">
             <img src="van.png" alt="Van Image" class="van-image">
         </div>
     </main>
+
+    <!-- Motivational Quote -->
+    <div id="quote"></div> <!-- Ensure no hardcoded text here, only dynamic content from JavaScript -->
 
     <!-- Footer with Instagram link -->
     <footer class="centered">
@@ -34,5 +50,38 @@
 
     <script src="rwurl_van.js"></script>
     <script src="rwurl_pet.js"></script>
+    <script>
+        // Array of quotes
+        const quotes = [
+            "Keep pushing forward!",
+            "Stay positive!",
+            "You can do it!",
+            "Never give up!",
+            "Believe in yourself!",
+            "Dream big!",
+            "Success is near!",
+            "Embrace the journey!",
+            "Rise and shine!", 
+            "Conquer today!",  // Add a comma after each quote
+            "Make this money", // The new quote 
+            "Blessing heading your way",
+            "Keep your head up",
+            "Spread sum love",
+        ];
+    
+        const quoteElement = document.getElementById("quote");
+    
+        // Function to update the quote randomly
+        function updateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quoteElement.textContent = quotes[randomIndex];
+        }
+    
+        // Run updateQuote every 5 minutes
+        setInterval(updateQuote, 300000);  // 300000 ms = 5 minutes
+    
+        // Show the first quote immediately
+        updateQuote();
+    </script>
 </body>
 </html>
