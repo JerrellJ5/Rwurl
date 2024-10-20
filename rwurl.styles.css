@@ -8,35 +8,65 @@ body {
     overflow: hidden; /* Prevent scroll bars */
 }
 
-/* Header styling */
+/* Center header content on all screen sizes */
 header {
     background-color: orange;
     padding: 20px;
     text-align: center;
 }
 
+/* Style for the logo to ensure it's centered */
 #logo {
     color: black;
-    font-family: 'Creepster', cursive; /* Spooky Font */
-    font-size: 10em; /* Increased font size */
-    margin: 0;
-    text-align: center; /* Center the text */
-    display: block; /* Ensure it takes up full width for centering */
+    font-family: 'Creepster', cursive;
+    font-size: 10em; /* Adjust the size as needed */
+    margin: 0 auto;
+    text-align: center;
 }
 
-/* Navigation links */
+/* Adjust the logo size for smaller screens */
+@media (max-width: 768px) {
+    #logo {
+        font-size: 2.5em; /* Smaller size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        font-size: 2em; /* Smaller size for phones */
+    }
+}
+
+/* Navigation link styles */
+nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
 nav a {
-    margin: 0 15px;
     color: white;
     text-decoration: none;
     font-size: 1.2em;
-    font-family: 'Creepster', cursive; /* Spooky Font */
+    font-family: 'Creepster', cursive;
+    margin: 0 15px;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
+/* Ensure that the navigation is centered on mobile */
+@media (max-width: 768px) {
+    nav a {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 0.9em;
+    }
+}
 /* Centered content */
 .centered-text {
     font-size: 4em; /* Increased by 1 unit (from 3em to 4em) */
