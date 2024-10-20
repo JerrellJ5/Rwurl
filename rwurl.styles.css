@@ -228,13 +228,36 @@ img {
     font-size: 1.5em;
     color: orange;
     z-index: 999;
+    max-width: 90%; /* Prevents the quote from stretching too wide */
+    word-wrap: break-word; /* Ensures long words break correctly */
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design for tablets and iPads (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    #quote {
+        font-size: 1.4em; /* Slightly smaller font for iPads */
+        bottom: 15px; /* Adjust bottom margin */
+        right: 15px; /* Adjust right margin */
+        max-width: 85%; /* Fit the quote properly on tablet screens */
+    }
+}
+
+/* Responsive design for smaller screens (below 768px, including large phones) */
 @media (max-width: 768px) {
     #quote {
-        font-size: 1.2em; /* Reduce the font size on smaller screens */
+        font-size: 1.2em; /* Reduce font size for smaller devices */
         bottom: 10px;
         right: 10px;
+        max-width: 85%;
+    }
+}
+
+/* Even smaller screens (below 480px, small phones) */
+@media (max-width: 480px) {
+    #quote {
+        font-size: 1em; /* Further reduce the font size for small screens */
+        bottom: 5px;
+        right: 5px;
+        max-width: 80%; /* Make sure it fits within small screens */
     }
 }
