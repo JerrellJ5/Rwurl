@@ -67,101 +67,18 @@ nav a:hover {
         font-size: 0.9em;
     }
 }
-/* Centered content */
-/* Centered content */
+
 /* Centered content */
 .centered-text {
-    font-size: 4em; /* Default size for large screens */
+    font-size: 4em; /* Increased by 1 unit (from 3em to 4em) */
     font-weight: bold;
     text-align: center;
     color: orange;
-    font-family: 'Creepster', cursive;
-    position: relative; /* Use relative positioning instead of absolute */
-    margin-bottom: 50px; /* Add margin to ensure space between text and button */
-}
-
-/* Back/Home button styling */
-.back-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: orange;
-    color: black;
-    text-decoration: none;
-    margin-top: 50px; /* Increase margin to separate the button from the text */
-}
-
-@media (max-width: 768px) {
-    .centered-text {/* Centered content */
-.centered-text {
-    font-size: 4em; /* Default size for large screens */
-    font-weight: bold;
-    text-align: center;
-    color: orange;
-    font-family: 'Creepster', cursive;
-    position: relative; /* Use relative positioning instead of absolute */
-    margin-bottom: 50px; /* Add margin to ensure space between text and button */
-}
-
-/* Back/Home button styling */
-.back-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: orange;
-    color: black;
-    text-decoration: none;
-    margin-top: 50px; /* Increase margin to separate the button from the text */
-}
-
-@media (max-width: 768px) {
-    .centered-text {
-        font-size: 2.5em; /* Smaller text size for smaller screens */
-        margin-bottom: 40px; /* Reduce the margin on smaller screens */
-    }
-
-    .back-button {
-        margin-top: 40px; /* Adjust button margin to ensure no overlap */
-    }
-}
-
-@media (max-width: 480px) {
-    .centered-text {
-        font-size: 2em; /* Even smaller text for phones */
-        margin-bottom: 30px; /* Ensure sufficient space between text and button */
-    }
-
-    .back-button {
-        margin-top: 30px; /* Ensure enough space on small screens */
-    }
-}
-        font-size: 2.5em; /* Smaller text size for smaller screens */
-        margin-bottom: 40px; /* Reduce the margin on smaller screens */
-    }
-
-    .back-button {
-        margin-top: 40px; /* Adjust button margin to ensure no overlap */
-    }
-}
-
-@media (max-width: 480px) {
-    .centered-text {
-        font-size: 2em; /* Even smaller text for phones */
-        margin-bottom: 30px; /* Ensure sufficient space between text and button */
-    }
-
-    .back-button {
-        margin-top: 30px; /* Ensure enough space on small screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .centered-text {
-        font-size: 2em; /* Smaller text for phones */
-        top: 40%; /* Move text higher to avoid overlapping the button */
-    }
-
-    .back-button {
-        margin-top: 20px; /* Ensure spacing for the back button on phones */
-    }
+    font-family: 'Creepster', cursive; /* Spooky Font */
+    position: absolute; /* Position the text absolutely to center it */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to perfectly center */
 }
 
 /* Contact info styling */
@@ -303,6 +220,8 @@ img {
         width: 50px; /* Smaller pet on very small devices */
         height: 50px; /* Maintain aspect ratio */
     }
+}
+
 /* Media query for landscape orientation */
 @media only screen and (orientation: landscape) {
     #logo {
@@ -311,30 +230,30 @@ img {
 
     .centered-text {
         font-size: 3em; /* Adjust text size for landscape mode */
-        top: 40%; /* Move text higher in landscape */
     }
 
     #virtual-van {
-        width: 8vw; /* Adjust van size for landscape mode */
-        top: 60%; /* Move van lower in landscape */
+        width: 60px; /* Adjust van size for landscape mode */
     }
 
     #pet {
         width: 60px; /* Adjust pet size for landscape mode */
     }
+
+    /* Additional styles can be added here for landscape orientation */
 }
 
-/* Adjust van size and text for smaller screens */
-@media (max-width: 480px) {
-    #virtual-van {
-        width: 12vw; /* Adjust van size for phones */
-        top: 60%; /* Ensure van is positioned lower on phones */
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    #logo {
+        font-size: 2.5em; /* Smaller logo for small screens */
     }
-    
+
     .centered-text {
-        top: 40%; /* Move text slightly higher */
+        font-size: 2.5em; /* Smaller text for small screens */
     }
 }
+
 /* Style for quotes on larger screens */
 #quote {
     position: fixed;
@@ -354,7 +273,9 @@ img {
         font-size: 1.4em; /* Slightly smaller font for iPads */
         bottom: 15px; /* Adjust bottom margin */
         right: 15px; /* Adjust right margin */
-        max-width: 85%; /* Fit the quote properly on tablet screens */
+        max-width: 85%; /* Fit the quote properly
+
+ on tablet screens */
     }
 }
 
@@ -376,4 +297,4 @@ img {
         right: 5px;
         max-width: 80%; /* Make sure it fits within small screens */
     }
-}}
+}
