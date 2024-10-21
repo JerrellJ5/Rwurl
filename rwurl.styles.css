@@ -68,16 +68,51 @@ nav a:hover {
     }
 }
 /* Centered content */
+/* Centered content */
 .centered-text {
-    font-size: 4em; /* Increased by 1 unit (from 3em to 4em) */
+    font-size: 4em; /* Default size for large screens */
     font-weight: bold;
     text-align: center;
     color: orange;
-    font-family: 'Creepster', cursive; /* Spooky Font */
-    position: absolute; /* Position the text absolutely to center it */
+    font-family: 'Creepster', cursive;
+    position: absolute;
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust to perfectly center */
+    transform: translate(-50%, -50%); /* Perfectly center text */
+}
+
+/* Adjustments for smaller screens to avoid text overlapping */
+@media (max-width: 1024px) {
+    .centered-text {
+        font-size: 2.8em; /* Adjust text size for iPads */
+        top: 45%; /* Position text slightly higher on iPads */
+    }
+
+    .back-button {
+        margin-top: 30px; /* Add more margin between text and the button */
+    }
+}
+
+@media (max-width: 768px) {
+    .centered-text {
+        font-size: 2.5em; /* Smaller text for smaller tablets */
+        top: 42%; /* Move text slightly higher */
+    }
+
+    .back-button {
+        margin-top: 25px; /* Maintain spacing on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .centered-text {
+        font-size: 2em; /* Smaller text for phones */
+        top: 40%; /* Move text higher to avoid overlapping the button */
+    }
+
+    .back-button {
+        margin-top: 20px; /* Ensure spacing for the back button on phones */
+    }
 }
 
 /* Contact info styling */
