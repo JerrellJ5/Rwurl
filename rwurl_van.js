@@ -2,13 +2,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const van = document.getElementById("virtual-van");
     let angle = 0; // Initial angle
     const speed = 0.02; // Speed of rotation
-    const radius = 175; // Radius for circular motion
+    let radius = Math.min(window.innerWidth, window.innerHeight) * 0.2; // Dynamic radius based on screen size
 
-    // Get the position of the "I'M COMIN!!!" text
-    const textElement = document.querySelector('.centered-text');
-    const textRect = textElement.getBoundingClientRect();
-    const centerX = textRect.left + textRect.width / 2; // Center X of the text
-    const centerY = textRect.top + textRect.height / 2; // Center Y of the text
+    // Function to get the center of the "I'M COMIN!!!" text
+    function updateTextPosition() {
+        const textElement = document.querySelector('.centered-text');
+        const textRect = textElement.getBoundingClientRect();
+        return {
+            centerX: textRect.left + textRect.width / 2,
+            centerY: textRect.top + textRect.height / 2
+        };
+    }
+
+    let { centerX, centerY } = updateTextPosition();
 
     // Function to move the van in a circular motion
     function moveVan() {
@@ -22,6 +28,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // Increment the angle for the next frame
         angle += speed;
     }
+
+    // Update radius and center position on window resize
+    window.addEventListener('resize', function () {
+        radius = Math.min(window.innerWidth, window.innerHeight) * 0.2; // Recalculate radius
+        ({ centerX, centerY } = updateTextPosition()); // Recalculate center position
+    });
 
     // Reverse direction on click
     van.addEventListener('click', () => {
