@@ -219,7 +219,7 @@ img {
         width: 50px; /* Smaller pet on very small devices */
         height: 50px; /* Maintain aspect ratio */
     }
-}/* Media query for landscape orientation */
+/* Media query for landscape orientation */
 @media only screen and (orientation: landscape) {
     #logo {
         font-size: 3em; /* Adjust logo size for landscape mode */
@@ -227,27 +227,29 @@ img {
 
     .centered-text {
         font-size: 3em; /* Adjust text size for landscape mode */
+        top: 40%; /* Move text higher in landscape */
     }
 
     #virtual-van {
-        width: 60px; /* Adjust van size for landscape mode */
+        width: 8vw; /* Adjust van size for landscape mode */
+        top: 60%; /* Move van lower in landscape */
     }
 
     #pet {
         width: 60px; /* Adjust pet size for landscape mode */
     }
-
-    /* Additional styles can be added here for landscape orientation */
 }
-/* Adjustments for smaller screens */
-@media (max-width: 600px) {
-    #logo {
-        font-size: 2.5em; /* Smaller logo for small screens */
+
+/* Adjust van size and text for smaller screens */
+@media (max-width: 480px) {
+    #virtual-van {
+        width: 12vw; /* Adjust van size for phones */
+        top: 60%; /* Ensure van is positioned lower on phones */
     }
+    
     .centered-text {
-        font-size: 2.5em; /* Smaller text for small screens */
+        top: 40%; /* Move text slightly higher */
     }
-    /* Other adjustments */
 }
 /* Style for quotes on larger screens */
 #quote {
@@ -290,4 +292,4 @@ img {
         right: 5px;
         max-width: 80%; /* Make sure it fits within small screens */
     }
-}
+}}
