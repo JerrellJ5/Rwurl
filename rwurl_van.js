@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const van = document.getElementById("virtual-van");
     let angle = 0; // Initial angle
+    let radius = Math.min(window.innerWidth, window.innerHeight) * 0.2; // Default radius
     const speed = 0.02; // Speed of rotation
-    let radius = Math.min(window.innerWidth, window.innerHeight) * 0.2; // Dynamic radius based on screen size
 
     // Function to get the center of the "I'M COMIN!!!" text
     function updateTextPosition() {
@@ -31,9 +31,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Update radius and center position on window resize
     window.addEventListener('resize', function () {
-        radius = Math.min(window.innerWidth, window.innerHeight) * 0.2; // Recalculate radius
+        radius = Math.min(window.innerWidth, window.innerHeight) * 0.2; // Recalculate radius for larger screens
         ({ centerX, centerY } = updateTextPosition()); // Recalculate center position
     });
+
+    // Increase radius for phones
+    if (window.innerWidth <= 480) {
+        radius = Math.min(window.innerWidth, window.innerHeight) * 0.4; // Increase radius on phones
+    }
 
     // Reverse direction on click
     van.addEventListener('click', () => {
